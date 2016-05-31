@@ -8,11 +8,16 @@
 
 \title{Questions de l'examen théorique de la partie électricité du cours [ELEC-H201]\\ donné par Johan GYSELINCK}
 
+\pagestyle{headandfoot}
+\firstpageheader{}{}{\tiny{Dernière modification: le \ddmmyyyydate \today \ à \currenttime }}
+
 \begin{document}
 
 \input{macros}
 
 \maketitle
+\thispagestyle{headandfoot}
+
 
 \begin{questions}
 \question{L’équation ci-dessous contient un certain nombre d’erreurs. La corriger/compléter à 4 endroits.
@@ -25,6 +30,7 @@ Dessiner le schéma équivalent qui y correspond. Indiquer tous les phaseurs et 
 \begin{equation*}
 \underline{I}_s = \underline{I}_m + \underline{I}_r = \frac{\underline{V}_s}{j X_m} + \frac{\underline{V}_s}{R_r/g + j X_d}
 \end{equation*}
+\todo{A faire: dessiner le schema equivalent}
 \end{solution}
 
 \question{De quel type de force magnétique s’agit-il dans l’équation ci-dessous? Compléter/corriger celle-ci à 2 endroits sachant que la force provient d’un courant sinusoidal de pulsation $\omega$. Y indiquer la partie utile de la force (entre parenthèses).
@@ -42,12 +48,21 @@ La partie utile dans la parenthèse est le "$\frac{1}{2}$".
 \end{solution}
 
 \question{Ajouter à l'équation ci-dessous une troisième expression du rendement d'un transformateur.
-\begin{align*}
-\eta = \frac{P_2}{P_1} = \frac{ P_1 - P_{\text{pertes}}} {P_1} = 
-\end{align*}
+\begin{equation*}
+\eta = \frac{P_2}{P_1} = \frac{ P_1 - P_{\text{pertes}}} {P_1}
+\end{equation*}
 De quel côté le transformateur est-il alimenté ? Expliciter le fonctionnement où le rendement est nul ?\\
 Donner une valeur réaliste (au \% près) pour le rendement nominal d'un transformateur réel de très grande taille.
 }
+\begin{solution}
+\begin{equation*}
+\eta = \frac{P_2}{P_1} = \frac{ P_1 - P_{\text{pertes}}} {P_1} = \frac{P_2}{P_2+P_{pertes}}
+\end{equation*}
+La puissance va du primaire au secondaire. Il est donc alimenté au primaire (à confirmer ?).
+Le rendement est nul lorsqu'aucune charge n'est connectée au secondaire.
+
+Un transformateur réel de très grande taille (de 100 MVA ou plus par exemple) a généralement un rendement supérieur à 99\% (les pertes nominales sont inférieures à 1\%).
+\end{solution}
 
 \question{ Les véhicules routiers purement électriques ont à l'heure actuelle 2 inconvénient pratiques majeurs, à l'achat et pour l'utilisation, qui proviennent du moyen de stockage d'énergie. Discutez brièvement:
 \begin{itemize}
@@ -122,7 +137,14 @@ Comment appelle-t-on le produit $ni$ ? Quelle est son unité (en deux mots) ?
 
 \includegraphics[width= 0.7 \textwidth]{./img/entrefer}
 }
-
+\begin{solution}
+\begin{itemize}
+\item L'équivalence entre circuit magnétique à aimant permanent et circuit magnétique à entrefer et bobines 
+\item Matériaux non magnétiques, magnétiques (dur ), conducteur  ??
+\item B est l'induction ou la densité de flux, mesurée en Tesla (T)
+\item Le produit ni est la force magnétomotrice, l'unité l'Ampère-tours.
+\end{itemize}
+\end{solution}
 \question{ Donner trois avantages importants et l'inconvénient majeur de la traction électrique de véhicules routiers (par rapport à ceux à traction conventionnelle). 
 }
 
@@ -179,7 +201,7 @@ De quels composants s'agit-il dans les deux cas respectifs ? Compléter la figur
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \centering
-\includegraphics[width= 0.5 \textwidth]{./img/mixeur}
+\includegraphics[width= 0.7 \textwidth]{./img/mixeur}
 \end{minipage}
 }
 \begin{solution}
@@ -327,7 +349,8 @@ Quel est l'autre type de machine asynchrone ?
 \includegraphics[width=0.3 \textwidth]{./img/cage}
 }
 \begin{solution}
-Il s'agit d'un rotor à cage. C'est très courant dans l'industrie car peu cher même si moins pratique que le rotor bobiné triphasé.
+Il s'agit d'un rotor à cage. C'est très courant dans l'industrie car peu cher même si moins pratique que le rotor bobiné triphasé.\\
+Sans surprise l'autre type de machine asynchrone est donc la machine à rotor bobiné !
 \end{solution}
 
 \end{questions}
@@ -335,6 +358,6 @@ Il s'agit d'un rotor à cage. C'est très courant dans l'industrie car peu cher 
 
 
 \blfootnote{La dernière version de ce document est disponible à l'adresse suivante: \url{https://www.overleaf.com/5344493hybftn}\\
-Vous pouvez le modifier en ligne sans même créer de compte (vous pouvez aussi vous connecter avec votre compte Google pour avoir un suivi des modifications). N'hésitez pas à y apporter votre contribution !}
+Vous pouvez le modifier en ligne sans même créer de compte (vous pouvez aussi vous connecter avec votre compte Google pour avoir un suivi des modifications). N'hésitez pas à y apporter votre contribution !\\ Si vous voulez simplement télécharger le dernière version en PDF, suivez le lien et cliquez sur "PDF" dans la barre en haut.}
 
 \end{document}
