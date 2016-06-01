@@ -78,12 +78,12 @@ Quels sont les moyens de freinage ("verts" et "moins verts") que possède un tel
 \begin{solution}
 \begin{itemize}
 \item A l'achat : le prix élevé
-\item Pour l'utilisation:  l'autonomie est limitée,  présence d'une batterie qu'il faut recharger et qui peut être encombrante
+\item Pour l'utilisation:  l'autonomie est limitée,  présence d'une batterie qu'il faut recharger et qui peut être encombrante (les moteurs thermiques sont plus compacts et plus autonomes). %sous la figure 1.5 dans le syllabus
 \end{itemize}
 
 \begin{itemize}
-\item Freinage vert:  freiner électriquement en récupérant l'énergie
-\item Freinage "moins vert" : freinage par frottement  $\Rightarrow$ énergie du freinage convertie en chaleur
+\item Freinage vert:  freinage avec récupération: on fait fonctionner le moteur en génératrice pendant le temps du freinage et l'énergie électrique récupérée est renvoyée à la batterie pour la charger (juste avant 1.4 - électronique de puissance - dans le syllabus).
+\item Freinage "moins vert" : freinage par frottement  $\Rightarrow$ énergie du freinage convertie en chaleur (perdue).
 \end{itemize}
 
 \end{solution}
@@ -110,7 +110,7 @@ Ce changement de niveau de tension (et courant) est traditionnellement réalisé
 \item La technologie: transformateur : appareil permettant de transporter l'énergie magnétiquement
 \item Le rendement: de 90 à 99\% (pour les plus gros)
 \end{itemize}
-\todo{parler aussi des atouts par rapport à une autre technologie}
+Atouts par rapport à une autre technologie: pertes énergétiques minimum et rapport de tension peu variable. Les transformateurs sont aussi beaucoup plus fiables que l'électronique de puissance (ils ne tombent pas en panne contrairement à l'électronique) (et peut-être même plus avantageux en terme de longévité ?)
 \end{solution}
 
 \question{Quel type de moteur est très couramment utilisé dans les jouets à pile ou à batterie ? Quel est le premier soucis de fabrication pour ce type d'application ? Nommer deux aspects qui importent très peu (par rapport aux moteurs utilisés dans l'industrie).
@@ -140,14 +140,22 @@ Comment appelle-t-on le produit $ni$ ? Quelle est son unité (en deux mots) ?
 \begin{solution}
 \begin{itemize}
 \item L'équivalence entre circuit magnétique à aimant permanent et circuit magnétique à entrefer et bobines 
-\item Matériaux non magnétiques, magnétiques (dur ), conducteur  ??
+\item Matériaux non magnétiques, magnétiques (dur ), conducteur  ?? (dans le syllabus il a mis fer, entrefer et aimant permanant, je ne sais pas si c'est ça qu'il entend par "matériau")
 \item B est l'induction ou la densité de flux, mesurée en Tesla (T)
 \item Le produit ni est la force magnétomotrice, l'unité l'Ampère-tours.
 \end{itemize}
 \end{solution}
 \question{ Donner trois avantages importants et l'inconvénient majeur de la traction électrique de véhicules routiers (par rapport à ceux à traction conventionnelle). 
 }
-
+\begin{solution}
+\begin{itemize}
+\item Vitesse des machines électriques peut être inversée et reglée dans une plage de vitesse importante sans boîte de vitesse
+\item Rendement nominal des moteurs élec élevé (de 80 à 90\%, dépendant de la taille)
+\item Moteurs électriques peu bruyant et pas polluants
+\item Possibilité d'exploiter l'énergie de freinage en électrique
+\item Moteurs à combustion plus compacts et ont une meilleure autonomie
+\end{itemize}
+\end{solution}
 \question{ Compléter le tableau ci-dessous avec les noms des grandeurs manquantes et leur unité. Dessiner dans le plan B versus H la caractéristique d'un "matériau magnétique parfait". Quel en serait l'équivalent électrique ?
 
 \begin{figure}[H]
@@ -213,7 +221,7 @@ Type de machine: machines tournantes
 
 Composant indiqué :\\
 A gauche : condensateur : rôle = compenser la perte de puissance réactive en en débitant.\\
-A droite : \todo{identifier le composant}
+A droite : ça ressemble au collecteur, qui est constitué des bagues et des balais. C'est une pièce essentielle des moteurs DC universels qui peut s'user ce qui est un désavantage  de ce type de moteur (pour la reconnaître: on voit qu'elle est un peu noire ce qui prouve l'usure des balais sur le collecteur).
 \end{solution}
 
 \question{ Pour chacune des 3 puissances actives et des 3 puissances réactives indiquées dans la figure ci-dessous, écrire une expression en exploitant les paramètres du schéma équivalent et les tensions et courants indiqués (en phaseur ou en valeur efficace). Pour les grandeurs secondaires accentuées, ne pas supprimer l'accent.
@@ -287,8 +295,8 @@ A vide et en court-circuit
  Les 3 pertes :
  \begin{itemize}
 \item pertes fer (hystérésis et courants de Foucault)
-\item pertes joules dans le circuit primaire
-\item pertes joules dans le circuit secondaire
+\item pertes cuivre (pertes joules)
+\item flux de dispersion 
 \end{itemize}
 \end{solution}
 
@@ -334,9 +342,11 @@ $P_2= V_2 I_2 \cos \phi_2$\\
 \begin{solution}\\
 \includegraphics[width= 0.7 \textwidth]{./img/schema_simpl}
 
+%C'est faux ici non? On a représenté ci-dessus le schéma simplifié lors du fonctionnement à vide, il faut juste mettre le schéma simplifié et les trois éléments sont $X_m$, $X_d$ et $R_r/g$ à priori => juste! j'ai changé le schéma 
+
 $V_s$ = tension d'alimentation (V)\\
 $I_s$ = phaseur du courant circulant dans les phases de l'enroulement statorique (A)\\
-$X_m$ = réactance de magnétisation ($\Omega$)\\
+$I_r$ = courant rotorique (A)\\
 $I_m$ = courant de magnétisation (A)\\
 \end{solution}
 
